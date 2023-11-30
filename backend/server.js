@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors())
 app.use(express.json())
-const dbURI = 'mongodb+srv://amorales:Kable123@cluster0.a2his0y.mongodb.net/';
+const dbURI = process.env.MONGO_URI;
 
 mongoose.connect(dbURI, { useNewUrlParser: true });
 
